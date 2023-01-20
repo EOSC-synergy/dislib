@@ -1,0 +1,14 @@
+config:
+  credentials: []
+  project_repos: {}
+environment:
+  JPL_DOCKERFORCEBUILD: enabled
+sqa_criteria:
+  QC.Uni:
+    repos:
+      this_repo:
+        commands:
+        - pip install coverage
+        - coverage3 run --source dislib tests
+        container: coverage_service
+timeout: 5400
