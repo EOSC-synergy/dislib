@@ -9,6 +9,7 @@ sqa_criteria:
       this_repo:
         commands:
         - pip install coverage
+        - pip install -r requirements.txt
         - coverage3 run --source dislib tests
         container: coverage_service
 timeout: 5400
