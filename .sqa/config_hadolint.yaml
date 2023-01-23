@@ -4,7 +4,8 @@ config:
 sqa_criteria:
   QC.Sty:
     repos:
-      dislib_hadolint:
+      hadolint tool:
+        container: hadolint
         commands:
           - |
             #!/bin/bash

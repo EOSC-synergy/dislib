@@ -7,6 +7,13 @@ pipeline {
 
     stages {
         stage('JePL demo: hadolint') {
+            when {
+                anyOf {
+                    branch 'feature/jepl_example'
+                    changeRequest id: 'feature/jepl_example'
+                    //buildingTag()
+                }
+            }
             steps {
                 script {
                     projectConfig = pipelineConfig(

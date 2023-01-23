@@ -1,6 +1,7 @@
 services:
-  command: sleep infinity
-  image: hadolint/hadolint:2.8.0-alpine
-  volumes:
-  - ./:/sqaaas-build
-  working_dir: /sqaaas-build
+  hadolint:
+    command: sleep infinity
+    image: hadolint/hadolint:2.8.0-alpine
+    volumes:
+    - ./:/sqaaas-build
+    working_dir: /sqaaas-build
