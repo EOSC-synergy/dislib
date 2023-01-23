@@ -9,4 +9,4 @@ sqa_criteria:
         commands:
           - |
             #!/bin/sh
-            hadolint */Dockerfile* --failure-threshold error
+            hadolint Dockerfile --failure-threshold error
