@@ -8,5 +8,5 @@ sqa_criteria:
         container: hadolint
         commands:
           - |
-            #!/bin/bash
+            #!/bin/sh
             hadolint */Dockerfile* --failure-threshold error
