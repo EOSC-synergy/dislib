@@ -10,7 +10,9 @@ pipeline {
             when {
                 anyOf {
                     branch 'feature/jepl_example'
+                    branch 'fix/jepl_example'
                     changeRequest id: '7'
+                    changeRequest id: '8'
                     //buildingTag()
                 }
             }
