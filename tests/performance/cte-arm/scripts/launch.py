@@ -56,14 +56,14 @@ def main():
                  "jnam=performance", "-x", "time_str=" + out,
                  os.path.join(scripts_dir, "postprocess.sh")]
     # print(' '.join(final_cmd))
-    subprocess.run('cd ' + logdir + '; ' + ' '.join(final_cmd), shell=True,
+    subprocess.run('cd ' + logdir + '; ' + ' '.join(final_cmd), shell=False,
                    executable='/bin/bash')
 
 
 def run_job(cmd, logdir):
     cd_log = 'cd ' + logdir
     subprocess.run(cd_log + '; ' + source_python + '; ' + ' '.join(cmd) +
-                   '; deactivate', shell=True, executable='/bin/bash')
+                   '; deactivate', shell=False, executable='/bin/bash')
 
 
 if __name__ == "__main__":
