@@ -10,7 +10,7 @@ pipeline {
             when {
                 anyOf {
                     branch 'feature/jepl_example'
-                    changeRequest id: 'feature/jepl_example'
+                    changeRequest id: 'PR-7git'
                     //buildingTag()
                 }
             }
