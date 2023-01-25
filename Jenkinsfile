@@ -11,8 +11,10 @@ pipeline {
                 anyOf {
                     branch 'feature/jepl_example'
                     branch 'fix/jepl_example'
+                    branch 'test/multiple_configs'
                     changeRequest id: '7'
                     changeRequest id: '8'
+                    changeRequest id: '9'
                     //buildingTag()
                 }
             }
@@ -21,6 +23,23 @@ pipeline {
                     projectConfig = pipelineConfig(
                         configFile: './.sqa/config_hadolint.yaml',
                         scmConfigs: [ localBranch: true ]
+                    )
+                    buildStages(projectConfig)
+                }
+            }
+            post {
+                cleanup {
+                    cleanWs()
+                }
+            }
+        }
+        stage('SQA baseline criterion: QC.Sec') {
+            steps {
+                script {
+                    projectConfig = pipelineConfig(
+                        configFile: '.sqa/config.yml',
+                        scmConfigs: [ localBranch: true ],
+                        validatorDockerImage: 'eoscsynergy/jpl-validator:2.4.0'
                     )
                     buildStages(projectConfig)
                 }
