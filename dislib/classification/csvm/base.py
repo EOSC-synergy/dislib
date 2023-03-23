@@ -98,6 +98,7 @@ class CascadeSVM(BaseEstimator):
     """
     _name_to_kernel = {"linear": "_linear_kernel", "rbf": "_rbf_kernel"}
 
+    
     def __init__(self, cascade_arity=2, max_iter=5, tol=1e-3,
                  kernel="rbf", c=1, gamma='auto', check_convergence=True,
                  random_state=None, verbose=False):
