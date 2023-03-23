@@ -1,0 +1,12 @@
+config:
+  deploy_template: '.sqa/docker-compose-jepl.yaml'
+
+sqa_criteria:
+  QC.Sty:
+    repos:
+      hadolint tool:
+        container: hadolint
+        commands:
+          - |
+            #!/bin/sh
+            hadolint Dockerfile --failure-threshold error
