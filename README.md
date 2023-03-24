@@ -33,6 +33,7 @@
     <a href="https://bit.ly/bsc-wdc-community">Slack</a>
 </b></p>
 
+[![SQAaaS badge shields.io](https://img.shields.io/badge/sqaaas%20software-bronze-e6ae77)](https://api.eu.badgr.io/public/assertions/6rKvPCe3RU2E0pLl6tuVlg "SQAaaS bronze badge achieved")
 
 ## Introduction
 
